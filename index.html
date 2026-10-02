@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090a0c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>APTV - Thai Live TV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="APTV หน้าหลัก">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>APTV</span>
+    </a>
+    <div class="on-air"><span></span> LIVE TV</div>
+    <time id="clock" aria-label="เวลาปัจจุบัน">--:--</time>
+  </header>
+
+  <main>
+    <section class="player-section" aria-label="เครื่องเล่นทีวี">
+      <div class="player-shell" id="playerShell">
+        <video id="video" playsinline webkit-playsinline preload="none"></video>
+        <div class="player-placeholder" id="placeholder">
+          <div class="placeholder-logo">A</div>
+          <p>เลือกช่องเพื่อเริ่มรับชม</p>
+        </div>
+        <div class="loading" id="loading" hidden><span></span><p>กำลังโหลดสัญญาณ...</p></div>
+        <div class="error-message" id="errorMessage" hidden>
+          <strong>ไม่สามารถเล่นช่องนี้ได้</strong>
+          <span>ลองกดโหลดใหม่ หรือเลือกช่องอื่น</span>
+        </div>
+        <div class="channel-overlay" id="channelOverlay" hidden>
+          <span class="live-dot"></span>
+          <strong id="nowPlaying">APTV</strong>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="control-button primary" id="playButton" type="button" aria-label="เล่นหรือหยุด">
+          <span id="playIcon" aria-hidden="true">▶</span><span id="playText">เล่น</span>
+        </button>
+        <button class="control-button icon-button" id="muteButton" type="button" aria-label="เปิดหรือปิดเสียง" title="เสียง">
+          <span id="muteIcon" aria-hidden="true">🔊</span>
+        </button>
+        <button class="control-button" id="reloadButton" type="button" aria-label="โหลดช่องใหม่">
+          <span aria-hidden="true">↻</span><span>โหลดใหม่</span>
+        </button>
+        <label class="quality-control" aria-label="ความคมชัด">
+          <span aria-hidden="true">▤</span>
+          <select id="qualitySelect" title="ความคมชัด">
+            <option value="auto">อัตโนมัติ</option>
+          </select>
+        </label>
+        <button class="control-button fullscreen-button" id="fullscreenButton" type="button" aria-label="เต็มจอ">
+          <span aria-hidden="true">⛶</span><span>เต็มจอ</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="channels-section" aria-labelledby="channelsTitle">
+      <div class="section-heading">
+        <h1 id="channelsTitle">ช่องทีวีไทย</h1>
+        <span id="channelCount">10 ช่อง</span>
+      </div>
+      <div class="channel-grid" id="channelGrid"></div>
+    </section>
+  </main>
+
+  <footer>APTV · รับชมผ่านเครือข่ายอินเทอร์เน็ต</footer>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.7.3/dist/hls.min.js"></script>
+  <script src="app.js?v=6"></script>
+</body>
+</html>
