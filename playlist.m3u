@@ -1,0 +1,15 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="Ch3.th" tvg-name="3HD" group-title="Thai TV",3HD
+https://live-us1.thaimomo.com/live-as/ch3hd-3/playlist.m3u8
+#EXTINF:-1 tvg-id="Channel7.th" tvg-name="7HD" group-title="Thai TV",7HD
+https://live-us1.thaimomo.com/live-as/ch7hd-3/playlist.m3u8
+#EXTINF:-1 tvg-id="One31.th" tvg-name="ONE31" group-title="Thai TV",ONE31
+https://live-us1.thaimomo.com/live-as/chone-3/playlist.m3u8
+#EXTINF:-1 tvg-id="ThaiPBS.th" tvg-name="Thai PBS" group-title="Thai TV",Thai PBS
+https://live-us1.thaimomo.com/live-as/chThaipbshd-2/playlist.m3u8
+#EXTINF:-1 tvg-id="PPTVHD36.th" tvg-name="PPTV HD 36" group-title="Thai TV",PPTV HD 36
+https://live-us1.thaimomo.com/live-as/chpptv-3/playlist.m3u8
+#EXTINF:-1 tvg-id="ThairathTV.th" tvg-name="Thairath TV" group-title="Thai TV",Thairath TV
+https://live-us1.thaimomo.com/live-as/chthairathhd-3/playlist.m3u8
+#EXTINF:-1 tvg-id="AmarinTV.th" tvg-name="Amarin TV" group-title="Thai TV",Amarin TV
+https://live-us1.thaimomo.com/live-as/chamarin-3/playlist.m3u8
